@@ -1,2 +1,3 @@
-# napi-async-example
-Node v8.x N-API asynchronous addon example
+# `napi-sync-callback-example`
+
+Node v8.x N-API synchronous callback example addon
