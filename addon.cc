@@ -1,7 +1,7 @@
 #include <napi.h>
 
 
-void AddCallback(const Napi::CallbackInfo& info) {
+void SumSyncCallback(const Napi::CallbackInfo& info) {
   Napi::Env env = info.Env();
 
   if (info.Length() != 3) {
@@ -26,7 +26,7 @@ void AddCallback(const Napi::CallbackInfo& info) {
 Napi::Object Init(Napi::Env env, Napi::Object exports) {
   exports.Set(
     Napi::String::New(env, "add"),
-    Napi::Function::New(env, AddCallback)
+    Napi::Function::New(env, SumSyncCallback)
   );
   return exports;
 }
